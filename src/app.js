@@ -8,10 +8,9 @@ function App() {
 
     return (
         <>
-            <div>
-                <p className="m-2 h-4 w-4 bg-blue-400 p-4 text-red-400">
-                    hello
-                </p>
+            <div className="min-h-full">
+                <p className=" bg-blue-400 text-black">hello abhay rana</p>
+                <h1>this is h1</h1>
             </div>
         </>
     );
