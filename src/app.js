@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+
 import ComponentOne from "~/components/component-one";
 // import viteLogo from "/vite.svg";
 
@@ -8,8 +8,7 @@ function App() {
 
 	return (
 		<>
-			<div>abhay rana</div>
-			<ComponentOne />
+			<div className="text-red-400">hello</div>
 		</>
 	);
 }

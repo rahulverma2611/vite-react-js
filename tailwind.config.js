@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./src/**/*.{html,js}"],
+	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	darkMode: "class", //dark mode is apply when there is change in the root class
 	theme: {
 		fontFamily: {
