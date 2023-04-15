@@ -1,25 +1,16 @@
-import React from 'react';
-
-import ScreenTwo from '~/screens/screen-two';
-
-import ComponentOne from '~/components/component-one';
-
-import { abhay } from '~/actions/actions-one';
-
-import { rana } from '~/reducers/reducer';
-
-// import ComponentOne from '~/components/component-one';
+import { useState } from 'react';
+import useTilg from 'tilg';
 
 const ScreenOne = () => {
-    abhay;
-    rana;
-    // useState();
+    useTilg();
+    const [state, setState] = useState(0);
+
     return (
         <>
-            <div className="text-red bg-blue-500">
-                ScreenOne
-                <ScreenTwo />
-                <ComponentOne />
+            <div>
+                <button onClick={() => setState(state + 1)}>
+                    Change:{state}
+                </button>
             </div>
         </>
     );
