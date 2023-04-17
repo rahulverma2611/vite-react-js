@@ -1,9 +1,13 @@
 import React, { memo } from 'react';
 
+import Routes from '~/routes';
+
 const App = () => {
     return (
         <>
-            <div className="text-red-800">app</div>
+            <div>
+                <Routes />
+            </div>
         </>
     );
 };

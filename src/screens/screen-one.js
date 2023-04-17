@@ -1,19 +1,15 @@
-import { useState } from 'react';
-import useTilg from 'tilg';
+import React from 'react';
+import { connect } from 'react-redux';
 
 const ScreenOne = () => {
-    useTilg();
-    const [state, setState] = useState(0);
-
     return (
         <>
-            <div>
-                <button onClick={() => setState(state + 1)}>
-                    Change:{state}
-                </button>
-            </div>
+            <div>ScreenOne</div>
         </>
     );
 };
 
-export default ScreenOne;
+const mapStateToProps = (state) => ({});
+const mapDispatchToProps = (dispatch) => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ScreenOne);

@@ -8,6 +8,7 @@
     "importOrder": [
         "^~/assets(.*)$",
         "^~/common(.*)$",
+        "^~/routes(/.*)?$",
         "^~/screens/(.*)$",
         "^~/components/(.*)$",
         "^~/actions/(.*)$",
