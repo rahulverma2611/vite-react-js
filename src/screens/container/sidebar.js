@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 
-const Footer = () => {
+const Sidebar = () => {
     return (
         <>
-            <div>Footer</div>
+            <div>Sidebar</div>
         </>
     );
 };
 
-export default memo(Footer);
+export default memo(Sidebar);

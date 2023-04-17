@@ -1,8 +1,8 @@
 import { Route, Switch } from 'wouter';
 
-import ErrorScreen from '~/screens/404';
 import AboutScreen from '~/screens/about-screen';
 import ContactScreen from '~/screens/contact-screen';
+import ErrorScreen from '~/screens/container/404';
 import HomeScreen from '~/screens/home-screen';
 
 const Routes = () => {
