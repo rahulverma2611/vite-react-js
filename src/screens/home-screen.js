@@ -8,17 +8,14 @@ const HomeScreen = () => {
             <div className="flex items-center justify-center">
                 This is HomeScreen
             </div>
-            <div className="flex flex-col gap-4 w-24 cursor-pointer">
+            <div className="flex w-24 cursor-pointer flex-col gap-4">
                 <button
                     className="bg-blue-500 p-4"
                     onClick={() => setLocation('/about')}
                 >
                     Go To About
                 </button>
-                <button
-                    className="bg-blue-500 p-4"
-                    onClick={() => setLocation('/contact')}
-                >
+                <button onClick={() => setLocation('/contact')}>
                     Go To Contact
                 </button>
             </div>
