@@ -6,6 +6,7 @@ import Container from '~/screens/container/container';
 import ErrorBoundary from '~/screens/container/error-boundary';
 
 const App = () => {
+    console.log(import.meta.env.MODE);
     return (
         <>
             <ErrorBoundary>

@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 const AboutScreen = () => {
     return (
         <>
-            <div>AboutScreen</div>
+            <div className="">AboutScreen</div>
         </>
     );
 };
