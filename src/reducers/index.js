@@ -8,6 +8,8 @@ import { REHYDRATION_SET_REHYDRATION_VALUE } from '~/actions/types';
 import { CounterReducer } from '~/reducers/counter-reducer';
 import { RehydrationReducer } from '~/reducers/rehydration-reducer';
 
+import { APP_MODE } from '~/env';
+
 const reducers = combineReducers({
     rehydration_store: RehydrationReducer,
 
@@ -31,13 +33,26 @@ let custom_config = {
 //     // Optionally pass options listed below
 // });
 
+let composeEnhancers;
+
+if (APP_MODE === 'development') {
+    composeEnhancers =
+        typeof window === 'object' &&
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+            ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+                  // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+                  //   trace: true, trace will be impact in performance so make it commented if you don't need it
+              })
+            : compose;
+} else composeEnhancers = compose;
+
 const middlewares = [
     applyMiddleware(thunk),
     offline(custom_config),
     // sentryReduxEnhancer,
 ];
 
-const enhancer = compose(...middlewares);
+const enhancer = composeEnhancers(...middlewares);
 
 const store = createStore(reducers, enhancer);
 

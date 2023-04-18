@@ -42,7 +42,7 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
 
 HomeScreen.propTypes = {
-    Increment_Counter: PropTypes.function,
-    Decrement_Counter: PropTypes.function,
+    Increment_Counter: PropTypes.func,
+    Decrement_Counter: PropTypes.func,
     counter: PropTypes.number,
 };
